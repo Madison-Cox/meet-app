@@ -5,10 +5,10 @@ import Event from './Event';
 
 class EventList extends Component {
   render() {
-    const { event } = this.props;
+    const { events } = this.props;
     return (
       <ul className='EventList'>
-        {event.map(event =>
+        {events.map(event =>
           <li key={event.id}>
             <Event event={event} />
           </li>
