@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { getEvents } from './api';
 class NumberOfEvents extends Component {
   state = {
     numberOfEvents: 32,
