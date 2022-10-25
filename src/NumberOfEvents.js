@@ -5,14 +5,6 @@ class NumberOfEvents extends Component {
     numberOfEvents: 32,
   };
 
-  handleInputChange = (event) => {
-    const value = event.target.value;
-    this.setState({
-      numberOfEvents: value,
-    });
-    this.props.updateEvents(value);
-  };
-
   updateEvents = (location, eventCount) => {
     const { numberOfEvents } = this.state;
     if (location === undefined) location = this.state.selectedLocation;
@@ -28,6 +20,16 @@ class NumberOfEvents extends Component {
       });
     });
   }
+
+  handleInputChange = (event) => {
+    const value = event.target.value;
+    this.setState({
+      numberOfEvents: value,
+    });
+    this.props.updateEvents(value);
+  };
+
+
 
 
   render() {
