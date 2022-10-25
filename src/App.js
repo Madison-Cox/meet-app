@@ -44,10 +44,11 @@ class App extends Component {
   }
 
   render() {
+    const { numberOfEvents } = this.state;
     return (
       <div className="App">
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents updateEvents={this.updateEvents} />
+        <NumberOfEvents numberOfEvents={numberOfEvents} updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
       </div>
     );
