@@ -32,12 +32,6 @@ class App extends Component {
     });
   }
 
-  handleInputChange = (event) => {
-    const value = event.target.value;
-    this.setState({
-      numberOfEvents: value,
-    });
-  };
 
   componentDidMount() {
     getEvents().then((events) => {
@@ -54,8 +48,8 @@ class App extends Component {
     return (
       <div className="App">
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents handleChange={this.handleInputChange} />
-        <EventList events={numberOfEvents} />
+        <NumberOfEvents />
+        <EventList events={this.state.events} />
       </div>
     );
   }
