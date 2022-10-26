@@ -19,7 +19,8 @@ class App extends Component {
   updateEvents = (location, eventCount) => {
     if (eventCount === undefined) {
       eventCount = this.state.numberOfEvents;
-    } else this.setState({ numberOfEvents: eventCount });
+    } else
+      this.setState({ numberOfEvents: eventCount });
     if (location === undefined) {
       location = this.state.locationSelected;
     }
@@ -51,7 +52,7 @@ class App extends Component {
     return (
       <div className="App">
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents numberOfEvents={numberOfEvents} updateEvents={this.updateEvents} />
+        <NumberOfEvents events={this.state.events} updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
       </div>
     );
