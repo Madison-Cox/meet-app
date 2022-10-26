@@ -18,6 +18,7 @@ class App extends Component {
 
   updateEvents = (location, eventCount) => {
     if (eventCount === undefined) {
+      eventCount = this.state.numberOfEvents;
     } else this.setState({ numberOfEvents: eventCount });
     if (location === undefined) {
       location = this.state.locationSelected;
@@ -27,7 +28,8 @@ class App extends Component {
         events :
         events.filter((event) => event.location === location);
       this.setState({
-        events: locationEvents
+        events: locationEvents.slice(0, eventCount),
+        locationSelected: location
       });
     });
   };
