@@ -5,6 +5,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 import App from '../App';
 import { mockData } from '../mock-data';
+import { extractLocations } from '../api';
+import CitySearch from '../CitySearch';
 const feature = loadFeature('./src/features/filterEventsByCity.feature');
 
 defineFeature(feature, test => {
