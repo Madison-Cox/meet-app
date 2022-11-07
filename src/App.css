@@ -5,6 +5,8 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-image: url('./img/pexels-cottonbro-studio-3171837.jpg');
+
 }
 
 .App * {
@@ -12,10 +14,14 @@
 }
 
 .number-of-events {
-  text-align: center;
+  color: black;
+  text-align: right;
+  font-size: large;
+  font-weight: bold;
 }
 
 ul {
+  background-color: aliceblue;
   padding: 0;
   list-style: none;
 }
@@ -151,6 +157,7 @@ input[type="number"] {
 }
 
 .recharts-surface {
+  background-color: azure;
   overflow: visible;
 }
 
@@ -211,6 +218,13 @@ input[type="number"] {
   font-family: "Roboto";
 }
 
+h4 {
+  font-size: xx-large;
+  font-weight: bold;
+  font-style: oblique;
+  background: #d0d0cc6e;
+}
+
 
 
 @media only screen and (min-width: 992px) {
@@ -224,4 +238,5 @@ input[type="number"] {
     min-width: auto;
     margin: 0 auto;
   }
+
 }
