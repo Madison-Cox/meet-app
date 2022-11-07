@@ -1,4 +1,4 @@
-#_{Mad's Meet App}_
+# Mad's Meet App
 
 # Introduction
 This is a serverless React APP that uses Google APi to fetch events data.
